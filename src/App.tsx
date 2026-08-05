@@ -14,26 +14,27 @@ import { Footer } from './components/shared/Footer.tsx'
 import Loader from './components/feedback/Loader.tsx'
 
 import { SmoothCursor } from './components/ui/smooth-cursor.tsx'
-
-
+import { SmoothScroll } from './components/providers/SmoothScroll.tsx'
 
 function App() {
 
   return (
     <BrowserRouter>
-      <SmoothCursor />
-      <Navbar />
-      <Suspense fallback={<Loader/>}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/technologies" element={<TechnologyPage />} />
-          <Route path="/about" element={<AboutPage />} />
-        </Routes>
-      </Suspense>
-      <BottomNav />
-      <Footer />
+      <SmoothScroll>
+        <SmoothCursor />
+        <Navbar />
+        <Suspense fallback={<Loader/>}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/technologies" element={<TechnologyPage />} />
+            <Route path="/about" element={<AboutPage />} />
+          </Routes>
+        </Suspense>
+        <BottomNav />
+        <Footer />
+      </SmoothScroll>
     </BrowserRouter>
   )
 }
