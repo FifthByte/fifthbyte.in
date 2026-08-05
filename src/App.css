@@ -1,0 +1,52 @@
+.loader {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: white;
+
+    z-index: 99999;
+
+    overflow: hidden;
+}
+
+.logo {
+    width: 120px;
+    position: relative;
+    z-index: 5;
+}
+
+.glow {
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(110,90,255,.35),
+            transparent 70%
+        );
+
+    filter: blur(35px);
+}
+
+.ring{
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(167, 74, 210, 0.536);
+}
