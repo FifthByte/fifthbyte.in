@@ -19,7 +19,7 @@ export default function SolutionCard({
     <motion.article
       whileHover={{ y: -8 }}
       transition={{ duration: 0.3 }}
-      className="group relative overflow-hidden h-90 rounded-3xl border border-neutral-200 bg-white p-8 transition-all duration-300 hover:border-violet-300 hover:shadow-2xl hover:shadow-violet-100"
+      className="group relative overflow-hidden md:h-85 h-75 rounded-3xl border border-neutral-200 bg-white p-8 transition-all duration-300 hover:border-violet-300 hover:shadow-2xl hover:shadow-violet-100"
     >
       {/* Background Glow */}
       <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-gradient-to-br from-violet-200/40 via-blue-200/20 to-cyan-200/30 blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
@@ -44,7 +44,7 @@ export default function SolutionCard({
       )}
 
       <div className="relative z-10 flex h-full flex-col">
-        <div className="mb-8 flex items-center justify-between">
+        <div className="mb-4 flex items-center justify-between">
           <span className="text-sm font-semibold tracking-wider text-neutral-400">
             {String(index + 1).padStart(2, "0")}
           </span>
@@ -54,7 +54,7 @@ export default function SolutionCard({
           {name}
         </h3>
 
-        <p className="mb-10 leading-7 text-neutral-600">
+        <p className="mb-6 leading-7 text-neutral-600">
           {description}
         </p>
 
