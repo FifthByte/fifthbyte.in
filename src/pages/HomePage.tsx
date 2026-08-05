@@ -4,9 +4,9 @@ import { HeroVisual } from "@/components/home/HeroVisual";
 import { MagneticButton } from "@/components/ui-kit/MagneticButton";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui-kit/Reveal";
 import { techCategories } from "@/data/technologies";
-import { projects } from "@/data/projects";
-import { ProjectCard } from "@/components/projects/ProjectCard";
 import { Link } from "react-router-dom";
+import { categories } from "@/data/categories";
+import SolutionCard from "@/components/projects/SolutionCard";
 
 
 export default function Index() {
@@ -66,7 +66,7 @@ export default function Index() {
       <section className="border-y border-border bg-surface px-6 py-20 md:py-24">
         <div className="mx-auto max-w-5xl">
           <Reveal className="flex flex-wrap items-end justify-between gap-4">
-            <h2 className="text-2xl tracking-tight md:text-3xl">Selected work</h2>
+            <h2 className="text-2xl tracking-tight md:text-3xl">We Provide</h2>
             <Link
               to="/projects"
               className="group inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
@@ -80,9 +80,9 @@ export default function Index() {
           </Reveal>
 
           <Stagger className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {projects.slice(0, 3).map((project) => (
-              <StaggerItem key={project.slug}>
-                <ProjectCard project={project} />
+            {categories?.slice(0,3).map((category,index) => (
+              <StaggerItem key={category.slug}>
+                <SolutionCard index={index} name={category.name} description={category.description}icon={category.icon}  />
               </StaggerItem>
             ))}
           </Stagger>
