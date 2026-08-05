@@ -13,10 +13,15 @@ import { BottomNav } from './components/shared/BottomNav.tsx'
 import { Footer } from './components/shared/Footer.tsx'
 import Loader from './components/feedback/Loader.tsx'
 
+import { SmoothCursor } from './components/ui/smooth-cursor.tsx'
+
+
+
 function App() {
 
   return (
     <BrowserRouter>
+      <SmoothCursor />
       <Navbar />
       <Suspense fallback={<Loader/>}>
         <Routes>

@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 export default function Index() {
   return (
-    <main className="pb-28 md:pb-0">
+    <main className="pb-7 md:pb-0">
       <section className="mx-auto grid w-full max-w-6xl items-center gap-12 px-6 pt-28 pb-16 md:grid-cols-2 md:gap-8 md:pt-36 md:pb-24">
         <div>
           <motion.p
@@ -124,7 +124,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="px-6 pb-24">
+      <section className="px-6 md:pb-20 pb-10">
         <Reveal className="shadow-soft mx-auto max-w-5xl overflow-hidden rounded-3xl border border-border bg-surface px-8 py-14 text-center">
           <h2 className="text-2xl tracking-tight md:text-4xl">
             Have something worth building?

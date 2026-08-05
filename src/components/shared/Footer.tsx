@@ -5,7 +5,7 @@ import {FaGithub, FaLinkedin} from 'react-icons/fa';
 
 export function Footer() {
   return (
-    <footer className="border-t border-border px-6 py-10">
+    <footer className="border-t border-border px-6 pb-22 pt-10 md:py-10">
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-5 sm:flex-row">
         {/* <Logo /> */}
         <p className="text-xs text-muted-foreground">

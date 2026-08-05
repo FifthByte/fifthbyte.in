@@ -3,7 +3,7 @@ import { Reveal } from "./Reveal";
 
 export function Page({ children }: { children: ReactNode }) {
   return (
-    <main className="mx-auto w-full max-w-5xl px-6 pt-28 pb-28 md:pt-32 md:pb-24">
+    <main className="mx-auto w-full max-w-5xl px-6 pt-28 pb-10 md:pt-32 md:pb-14">
       {children}
     </main>
   );
