@@ -1,6 +1,6 @@
 import { Mail } from "lucide-react";
 import { social } from "@/lib/nav";
-import {FaGithub, FaLinkedin} from 'react-icons/fa';
+import {FaGithub, FaLinkedin,FaInstagram} from 'react-icons/fa';
 
 
 export function Footer() {
@@ -16,6 +16,7 @@ export function Footer() {
             { href: `mailto:${social.email}`, icon: Mail, label: "Email" },
             { href: social.linkedin, icon: FaLinkedin, label: "LinkedIn" },
             { href: social.github, icon: FaGithub, label: "GitHub" },
+            { href: social.instagram, icon: FaInstagram, label: "Instagram" },
           ].map(({ href, icon: Icon, label }) => (
             <a
               key={label}

@@ -7,6 +7,7 @@ const ProjectsPage = lazy(() => import("./pages/ProjectsPage.tsx"))
 const ContactPage = lazy(() => import("./pages/ContactPage.tsx"))
 const TechnologyPage = lazy(() => import("./pages/TechnologyPage.tsx"))
 const AboutPage = lazy(() => import("./pages/AboutPage.tsx"))
+const NotFound = lazy(() => import("./pages/NotFound.tsx"))
 
 import { Navbar } from './components/shared/Navbar.tsx'
 import { BottomNav } from './components/shared/BottomNav.tsx'
@@ -30,6 +31,7 @@ function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/technologies" element={<TechnologyPage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
         <BottomNav />

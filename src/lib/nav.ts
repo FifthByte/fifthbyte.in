@@ -9,7 +9,8 @@ export const navItems = [
 ] as const;
 
 export const social = {
-  email: "hello@fifthbyte.dev",
-  linkedin: "https://linkedin.com/company/fifthbyte",
+  email: "thefifthbyte@gmail.com",
+  linkedin: "https://www.linkedin.com/in/thefifthbyte/",
   github: "https://github.com/fifthbyte",
+  instagram: "https://www.instagram.com/thefifthbyte/",
 };
