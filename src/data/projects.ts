@@ -45,4 +45,13 @@ export const projects: Project[] = [
     gradient: "from-blue/60 via-violet/55 to-cyan/60",
     image:"/evo.webp"
   },
+  {
+    slug: "twinkleoffset",
+    name: "Twinkle Offset Press",
+    category: "Static Website",
+    description: "Showcasing the brand of Twinkle Offset Press.",
+    tags: ["React", "Tailwind Css", "Vercel"],
+    gradient: "from-blue/60 via-violet/55 to-cyan/60",
+    image:"/twinkle.webp"
+  },
 ];
