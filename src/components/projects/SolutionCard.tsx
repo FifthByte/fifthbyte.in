@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import type { IconType } from "react-icons";
+import { Link } from "react-router-dom";
 
 interface SolutionCardProps {
   index: number;
@@ -59,10 +60,10 @@ export default function SolutionCard({
         </p>
 
         <div className="mt-auto">
-          <button className="inline-flex items-center gap-2 font-medium text-violet-700 transition-all duration-300 group-hover:gap-3">
+          <Link to={"/projects"} className="inline-flex items-center gap-2 font-medium text-violet-700 transition-all duration-300 group-hover:gap-3">
             Explore
             <ArrowUpRight size={18} />
-          </button>
+          </Link>
         </div>
       </div>
     </motion.article>

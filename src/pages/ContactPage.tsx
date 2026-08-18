@@ -80,7 +80,7 @@ export default function ContactPage() {
   };
 
   const getEnvVar = (key: string, viteKey: string): string => {
-    const val = (import.meta as any).env?.[viteKey] || (import.meta as any).env?.[key] || "";
+    const val = (import.meta).env?.[viteKey] || (import.meta).env?.[key] || "";
     return typeof val === "string" ? val.replace(/["';]/g, "").trim() : "";
   };
 
@@ -125,7 +125,7 @@ export default function ContactPage() {
 
           if (!response.ok) {
             const errorText = await response.text();
-            throw new Error(errorText || "Failed to send email via API endpoint.");
+            throw new Error(errorText || "Failed to send email via API endpoint.", { cause: libError });
           }
         }
 
@@ -142,11 +142,12 @@ export default function ContactPage() {
           "EmailJS configuration parameters are missing. Please verify VITE_EMAIL_JS_SERVICE_ID, VITE_EMAIL_JS_TEMPLATE_ID, and VITE_EMAIL_JS_PUBLIC_KEY in your .env file."
         );
       }
-    } catch (err: any) {
+    } catch (err) {
       console.error("EmailJS submission error:", err);
       setSubmitStatus("error");
+      const errorObj = err as { text?: string; message?: string } | undefined;
       setErrorMessage(
-        err?.text || err?.message || "An unexpected error occurred while sending your message. Please try again later."
+        errorObj?.text || errorObj?.message || "An unexpected error occurred while sending your message. Please try again later."
       );
     } finally {
       setIsSubmitting(false);

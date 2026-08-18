@@ -27,13 +27,13 @@ export function ProjectCard({ project }: { project: Project }) {
       <div className="p-3.5">
         <div className="flex items-start justify-between gap-3">
           <h3 className="text-base font-semibold tracking-tight">{project.name}</h3>
-          <span className="flex items-center gap-1 text-xs text-muted-foreground transition-colors group-hover:text-foreground">
+          <a href={project.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-xs text-muted-foreground transition-colors group-hover:text-foreground">
             View
             <ArrowUpRight
               size={13}
               className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
             />
-          </span>
+          </a >
         </div>
         <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
           {project.description}

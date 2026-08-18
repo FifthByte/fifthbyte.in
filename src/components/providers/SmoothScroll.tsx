@@ -1,15 +1,10 @@
-import React, { createContext, useContext, useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import Lenis from 'lenis'
 import 'lenis/dist/lenis.css'
+import { SmoothScrollContext } from './SmoothScrollContext'
 
-interface SmoothScrollContextType {
-  lenis: Lenis | null
-}
 
-const SmoothScrollContext = createContext<SmoothScrollContextType>({ lenis: null })
-
-export const useLenis = () => useContext(SmoothScrollContext)
 
 interface SmoothScrollProps {
   children: React.ReactNode
@@ -31,7 +26,6 @@ export const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
     })
 
     lenisRef.current = lenis
-    setLenisInstance(lenis)
 
     let animationFrameId: number
 
@@ -41,6 +35,10 @@ export const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
     }
 
     animationFrameId = requestAnimationFrame(raf)
+
+    queueMicrotask(() => {
+      setLenisInstance(lenis)
+    })
 
     return () => {
       cancelAnimationFrame(animationFrameId)
