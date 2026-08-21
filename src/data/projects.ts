@@ -62,4 +62,14 @@ export const projects: Project[] = [
     image:"/twinkle.webp",
     url:"https://twinkleoffset.shop/"
   },
+  {
+    slug: "Erfolgsacademy",
+    name: "Erfolgs Academy",
+    category: "Static Website",
+    description: "Showcasing the brand of Erfolgs Academy.",
+    tags: ["React", "Tailwind Css", "Vercel"],
+    gradient: "from-blue/60 via-violet/55 to-cyan/60",
+    image: "/erfolgs.webp",
+    url: "https://www.erfolgsacademy.com/"
+  },
 ];
