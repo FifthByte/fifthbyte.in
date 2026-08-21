@@ -10,7 +10,7 @@ export const navItems = [
 
 export const social = {
   email: "thefifthbyte@gmail.com",
-  linkedin: "https://www.linkedin.com/in/thefifthbyte/",
+  linkedin: "https://www.linkedin.com/company/fifthbyte",
   github: "https://github.com/fifthbyte",
   instagram: "https://www.instagram.com/thefifthbyte/",
 };
